@@ -20,7 +20,8 @@ ssh echopilot@{THE_IP}
 5. Kill that command then put on QC Pass sticker.
 
 # Test Fan
-Run `python test_fan.py`.
-The code will toggle fan power between 100% and 40%.
-For the best test _connect the fan when the output reads 40%_ and ensure the fan spins up and increases power at 100% and the decreases at the next 40%.
-Note: A small percent of fans when first powered up at 40% will remain off even when output is increased to 100%. 
+Run `python test_fan.py` and leave it going. The code will toggle fan power between 100% and 40% in a loop.
+
+When the output shows 40%, quickly connect the fan to the board. Ensure the fan spins up and increases power at 100% and then decreases at the next 40% cycle.
+
+Note for failures: A small percent of fans when first powered up at 40% will remain off even when output is increased to 100%. Reject such fans.
