@@ -5,12 +5,11 @@
 SUDO=$(test ${EUID} -ne 0 && which sudo)
 LOCAL=/usr/local
 TEST_SCRIPT=./detect_thermal.sh
-TARGET_IP=10.0.0.63
+TARGET_IP=10.0.0.38
 TARGET_PORT=5600
 
 echo "Start Fermion Thermal Tester"
 
-SUDO=$(test ${EUID} -ne 0 && which sudo)
 $SUDO systemctl stop video-thermal
 
 THERMAL_BITRATE=1000
