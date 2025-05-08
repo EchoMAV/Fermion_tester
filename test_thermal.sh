@@ -10,6 +10,9 @@ TARGET_PORT=5600
 
 echo "Start Fermion Thermal Tester"
 
+SUDO=$(test ${EUID} -ne 0 && which sudo)
+$SUDO systemctl stop video-thermal
+
 THERMAL_BITRATE=1000
 
 #Scale the THERMAL_BITRATE from kbps to bps
